@@ -1,0 +1,26 @@
+%chapter 2 ----> drink it
+
+%Poly
+%polyval
+%conv
+%deconv
+%print a table of number taken input from user
+%disp()
+%fprintf() and diff btw this and disp
+%logical, comparision operators 
+%order of precedence
+
+a= input("Enter value of a:\n ");
+if a<30
+    disp("A <30");
+elseif a>30
+    disp("a>30");
+end
+
+x = [0:0.1:1];
+
+y = x.*sin(x);
+z = x'*sin(x);
+z == y
+
+
