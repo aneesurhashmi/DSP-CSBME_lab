@@ -25,16 +25,20 @@ title("Continouse time signal");
 grid on;
 
 % calculate dft now
+tic
 xk = zeros(1, N);
 for k=0:N-1
     for n_temp=0:N-1
         xk(k+1) = xk(k+1)+xn(n_temp+1)*exp((-i)*2*pi*n_temp*k/N);
     end
 end
+toc
 
+tic
 % vectorized implementation
- Xk_exp = exp(-i*2*pi.*(K'*n)/N); % exponent calcuated
+Xk_exp = exp(-i*2*pi.*(K'*n)/N); % exponent calcuated
  Xk = sum(xn.*Xk_exp,2);
+toc
 
 %loop implementation
 xk_magnitude = abs(xk);
