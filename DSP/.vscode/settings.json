@@ -1,3 +1,4 @@
 {
-    "matlab.mlintpath" : "/usr/local/MATLAB/R2018b/bin/glnxa64/mlint"
+    "matlab.mlintpath" : "/usr/local/MATLAB/R2018b/bin/glnxa64/mlint",
+    "better-comments.multilineComments": true
 }
