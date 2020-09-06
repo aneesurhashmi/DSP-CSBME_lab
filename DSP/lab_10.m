@@ -30,9 +30,12 @@ clc;
 
 % IIR Digital filters Types:
     % Butterworth filter
+        % Pass band is flat, roll of rate is 20db per decay.no ripple in stop band. Common in audio processing
     % Chebyshev Type I filter
+        % order_of_filter/2 number of ripples in pass band only. Roll of rate is greater than Butterworth
     % Chebybshev Type II filter
     % Eliptic filter
+        % Ripples in pass band as well as in stop band. Fastest transition from pass band to stop band (roll of rate)
 
 % Commands (methods):
     % [b, a] = butter(N ,Wn )
