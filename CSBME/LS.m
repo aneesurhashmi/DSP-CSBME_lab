@@ -1,7 +1,7 @@
 % isplay TF
 % zpk
     % zero pole gain model
-%     gian is the denom
+    % gain is the numerator
 % factors should be known
 % repeated factors add to power
 F = zpk([2 3 4 4],[1 -2 -2], 1);
@@ -9,7 +9,7 @@ F = zpk([2 3 4 4],[1 -2 -2], 1);
 % similarly we have
 % tf <--- uses polynomial 
 % it takes denom and numerator only
- F1  = tf([1], [1 2]); 
+F1  = tf([1], [1 2]); 
 
  %  alternantive method
 s = tf("s");
@@ -30,14 +30,11 @@ denf = poly([0 -4 -8]);
 % R --> A. B. C etc
 [R,p,k] = residue(numf, denf);
 
-
-
 % solving systems
 % electrical and mechanical
 % using vectorized implementation
 % using syms v1 v2 v2 ...
 % X = inv(A)B
-
 
 % state space systems
 % define all matrices
@@ -48,7 +45,6 @@ denf = poly([0 -4 -8]);
 
 % TF to Space state
     % tf2ss(num, denom)
-
 
 % cascading two blocks in block diagram
     % series
